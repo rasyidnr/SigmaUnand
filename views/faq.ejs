@@ -1,0 +1,37 @@
+<main class="flex-grow w-full flex items-start justify-center p-4 sm:p-6 lg:p-8">
+
+  <div class="w-full max-w-6xl mx-auto bg-[#F5F5DC]/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12">
+
+    <h1 class="text-4xl font-bold text-[#4A5C3D] text-center mb-8">Frequently Asked Question</h1>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">All</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Contact Information</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Lupa Password</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">UKM</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Error</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Maintenence</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Kalender Kegiatan</button>
+      <button class="bg-[#4A5C3D] text-white font-semibold py-2 px-5 rounded-full text-sm">Berita</button>
+    </div>
+
+    <div class="space-y-4">
+
+      <% faqList.forEach(faq => { %>
+        <details class="bg-white/60 p-4 rounded-xl shadow group" name="faq-accordion">
+          <summary class="flex justify-between items-center font-semibold text-gray-800 cursor-pointer list-none">
+            <span><%= faq.question %></span>
+            <span class="text-gray-500 transition-transform duration-300 group-open:-rotate-180">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <p class="text-gray-600 mt-4">
+            <%= faq.answer %>
+          </p>
+        </details>
+      <% }) %>
+
+    </div>
+
+  </div>
+</main>

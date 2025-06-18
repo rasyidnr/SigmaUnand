@@ -1,0 +1,36 @@
+<main class="flex-grow w-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+
+  <div class="w-full max-w-7xl mx-auto bg-[#F5F5DC]/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12">
+
+    <h1 class="text-4xl font-bold text-[#4A5C3D] text-center mb-8">List Pendaftar</h1>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead class="bg-[#B9D89A] text-gray-700 uppercase">
+          <tr>
+            <th class="p-3 font-semibold border border-gray-400">No</th>
+            <th class="p-3 font-semibold border border-gray-400">Nama</th>
+            <th class="p-3 font-semibold border border-gray-400">Tanggal</th>
+            <th class="p-3 font-semibold border border-gray-400">UKM</th>
+            <th class="p-3 font-semibold border border-gray-400">Divisi</th>
+            <th class="p-3 font-semibold border border-gray-400">Berkas</th>
+            <th class="p-3 font-semibold border border-gray-400">Status</th>
+          </tr>
+        </thead>
+        <tbody class="bg-[#D9E9C6]">
+          <% pendaftarList.forEach((pendaftar, index) => { %>
+            <tr class="hover:bg-[#c9d9b6]">
+              <td class="p-3 border border-gray-400"><%= index + 1 %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.nama %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.tanggal %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.ukm %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.divisi %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.berkas %></td>
+              <td class="p-3 border border-gray-400"><%= pendaftar.status %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
